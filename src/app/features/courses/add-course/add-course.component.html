@@ -1,0 +1,31 @@
+<section class="form-page">
+  <div class="form-card">
+    <div class="form-card__title">
+      <div>
+        <h1>Add course</h1>
+        <p>Create a new course record for the academic year.</p>
+      </div>
+      <a class="button" routerLink="/courses">Back to courses</a>
+    </div>
+
+    <form (ngSubmit)="addCourse()">
+      <label>
+        Course code
+        <input type="text" [(ngModel)]="course.code" name="code" required />
+      </label>
+      <label>
+        Course name
+        <input type="text" [(ngModel)]="course.name" name="name" required />
+      </label>
+      <label>
+        Instructor
+        <input type="text" [(ngModel)]="course.instructor" name="instructor" required />
+      </label>
+      <label>
+        Seats available
+        <input type="number" [(ngModel)]="course.seats" name="seats" required />
+      </label>
+      <button type="submit">Save course</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="dashboard">
+  <div class="dashboard__header">
+    <div>
+      <h1>Admin Dashboard</h1>
+      <p>Monitor student progress, teacher activity, and key school metrics.</p>
+    </div>
+    <a class="dashboard__action" routerLink="/students/add">Add student</a>
+  </div>
+
+  <div class="dashboard__grid">
+    <article *ngFor="let stat of stats" class="dashboard__card" [style.border-color]="stat.highlight">
+      <span class="dashboard__stat">{{ stat.value }}</span>
+      <p class="dashboard__label">{{ stat.label }}</p>
+    </article>
+  </div>
+
+  <div class="dashboard__panel">
+    <h2>Recent updates</h2>
+    <ul>
+      <li *ngFor="let item of alerts">{{ item }}</li>
+    </ul>
+  </div>
+</section>

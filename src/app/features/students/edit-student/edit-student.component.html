@@ -1,0 +1,31 @@
+<section class="form-page">
+  <div class="form-card">
+    <div class="form-card__title">
+      <div>
+        <h1>Edit student</h1>
+        <p>Update student details and save changes.</p>
+      </div>
+      <a class="button" routerLink="/students">Cancel</a>
+    </div>
+
+    <form (ngSubmit)="saveStudent()">
+      <label>
+        Full name
+        <input type="text" [(ngModel)]="student.name" name="name" required />
+      </label>
+      <label>
+        Grade
+        <input type="text" [(ngModel)]="student.grade" name="grade" required />
+      </label>
+      <label>
+        Section
+        <input type="text" [(ngModel)]="student.section" name="section" required />
+      </label>
+      <label>
+        Email
+        <input type="email" [(ngModel)]="student.email" name="email" required />
+      </label>
+      <button type="submit">Save changes</button>
+    </form>
+  </div>
+</section>

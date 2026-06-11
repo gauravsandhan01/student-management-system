@@ -1,0 +1,33 @@
+<section class="page-list">
+  <div class="page-list__header">
+    <div>
+      <h1>Students</h1>
+      <p>Review and manage enrolled students.</p>
+    </div>
+    <a class="button" routerLink="/students/add">New student</a>
+  </div>
+
+  <div class="cards-grid">
+    <div class="student-card" *ngFor="let student of students">
+      <a class="avatar-link" [routerLink]="['/students', student.id]">
+        <img [src]="student.photo || defaultPhotoUrl" [alt]="student.name" />
+      </a>
+
+      <div class="card-body">
+        <h3 class="student-name">{{ student.name }}</h3>
+        <p class="student-id">{{ student.id }}</p>
+
+        <div class="info">
+          <div class="info-row"><span>Grade</span><strong>{{ student.grade }}</strong></div>
+          <div class="info-row"><span>Section</span><strong>{{ student.section }}</strong></div>
+          <div class="info-row"><span>Status</span><strong>{{ student.status }}</strong></div>
+        </div>
+
+        <div class="card-actions">
+          <a class="btn btn-view" [routerLink]="['/students', student.id]">View</a>
+          <a class="btn btn-edit" [routerLink]="['/students', student.id, 'edit']">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

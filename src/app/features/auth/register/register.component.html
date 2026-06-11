@@ -1,0 +1,22 @@
+<section class="auth-page">
+  <div class="auth-card">
+    <h1>Create account</h1>
+    <p>Register to manage students, courses, and attendance.</p>
+    <form (ngSubmit)="submitRegistration()">
+      <label>
+        Full name
+        <input type="text" [(ngModel)]="user.name" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" [(ngModel)]="user.email" name="email" required />
+      </label>
+      <label>
+        Password
+        <input type="password" [(ngModel)]="user.password" name="password" required />
+      </label>
+      <button type="submit">Register</button>
+    </form>
+      <p class="auth-note">Already registered? <a routerLink="/login">Login</a></p>
+  </div>
+</section>

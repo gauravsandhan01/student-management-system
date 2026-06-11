@@ -1,0 +1,30 @@
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__brand">
+    <a class="navbar__logo" routerLink="/dashboard">Student Management</a>
+    <button
+      class="navbar__toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="navbar-menu"
+      [attr.aria-expanded]="isMenuOpen"
+      (click)="toggleMenu()"
+    >
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+  </div>
+
+  <div id="navbar-menu" class="navbar__menu" [class.open]="isMenuOpen">
+    <a
+      *ngFor="let link of navLinks"
+      class="navbar__link"
+      [routerLink]="link.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: false }"
+      (click)="closeMenu()"
+    >
+      {{ link.label }}
+    </a>
+  </div>
+</nav>

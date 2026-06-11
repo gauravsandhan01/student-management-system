@@ -1,0 +1,27 @@
+<section class="page-list">
+  <div class="page-list__header">
+    <div>
+      <h1>Marks</h1>
+      <p>Student marks by subject and assessment.</p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Subject</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of marks">
+          <td>{{ item.student }}</td>
+          <td>{{ item.subject }}</td>
+          <td>{{ item.score }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

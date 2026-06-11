@@ -1,0 +1,31 @@
+<section class="form-page">
+  <div class="form-card">
+    <div class="form-card__title">
+      <div>
+        <h1>Add teacher</h1>
+        <p>Register a new instructor and assign a subject.</p>
+      </div>
+      <a class="button" routerLink="/teachers">Back to teachers</a>
+    </div>
+
+    <form (ngSubmit)="addTeacher()">
+      <label>
+        Full name
+        <input type="text" [(ngModel)]="teacher.name" name="name" required />
+      </label>
+      <label>
+        Subject
+        <input type="text" [(ngModel)]="teacher.subject" name="subject" required />
+      </label>
+      <label>
+        Email
+        <input type="email" [(ngModel)]="teacher.email" name="email" required />
+      </label>
+      <label>
+        Phone
+        <input type="text" [(ngModel)]="teacher.phone" name="phone" required />
+      </label>
+      <button type="submit">Save teacher</button>
+    </form>
+  </div>
+</section>

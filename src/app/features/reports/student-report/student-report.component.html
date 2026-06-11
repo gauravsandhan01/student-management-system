@@ -1,0 +1,27 @@
+<section class="report-card">
+  <div class="report-card__header">
+    <h1>Student report</h1>
+    <p>Summary of student performance and attendance.</p>
+  </div>
+
+  <div class="report-card__panel">
+    <div class="report-stat">
+      <h2>{{ report.name }}</h2>
+      <p>ID: STU101</p>
+    </div>
+    <div class="report-stat">
+      <span>Grade</span>
+      <strong>{{ report.grade }}</strong>
+    </div>
+    <div class="report-stat">
+      <span>Average score</span>
+      <strong>{{ report.average }}%</strong>
+    </div>
+    <div class="report-stat">
+      <span>Attendance</span>
+      <strong>{{ report.attendance }}%</strong>
+    </div>
+  </div>
+
+  <div class="report-card__note">{{ report.remarks }}</div>
+</section>

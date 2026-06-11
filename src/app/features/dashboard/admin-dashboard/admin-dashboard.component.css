@@ -1,0 +1,76 @@
+.dashboard {
+  padding: 1.5rem 0;
+}
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.dashboard__header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.dashboard__header p {
+  margin: 0.4rem 0 0;
+  color: #475569;
+}
+
+.dashboard__action {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.3rem;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 0.85rem;
+  text-decoration: none;
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard__card {
+  padding: 1.35rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard__stat {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dashboard__label {
+  margin: 0.6rem 0 0;
+  color: #475569;
+}
+
+.dashboard__panel {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard__panel h2 {
+  margin-top: 0;
+}
+
+.dashboard__panel ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: #475569;
+}

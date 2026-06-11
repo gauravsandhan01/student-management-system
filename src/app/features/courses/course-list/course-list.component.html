@@ -1,0 +1,30 @@
+<section class="page-list">
+  <div class="page-list__header">
+    <div>
+      <h1>Courses</h1>
+      <p>Track course availability and instructors.</p>
+    </div>
+    <a class="button" routerLink="/courses/add">Add course</a>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Instructor</th>
+          <th>Seats</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses">
+          <td>{{ course.code }}</td>
+          <td>{{ course.name }}</td>
+          <td>{{ course.instructor }}</td>
+          <td>{{ course.seats }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

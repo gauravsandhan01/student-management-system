@@ -1,0 +1,29 @@
+<section class="page-list">
+  <div class="page-list__header">
+    <div>
+      <h1>Exams</h1>
+      <p>Upcoming exam schedule and location details.</p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let exam of exams">
+          <td>{{ exam.subject }}</td>
+          <td>{{ exam.date }}</td>
+          <td>{{ exam.time }}</td>
+          <td>{{ exam.location }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="detail-card">
+  <div class="detail-card__header">
+    <div>
+      <h1>{{ student.name }}</h1>
+      <p>ID: {{ student.id }}</p>
+    </div>
+    <a class="button" routerLink="/students">Back to list</a>
+  </div>
+
+  <div class="detail-card__body">
+    <div class="detail-row"><span>Grade</span><strong>{{ student.grade }}</strong></div>
+    <div class="detail-row"><span>Section</span><strong>{{ student.section }}</strong></div>
+    <div class="detail-row"><span>Email</span><strong>{{ student.email }}</strong></div>
+    <div class="detail-row"><span>Phone</span><strong>{{ student.phone }}</strong></div>
+    <div class="detail-row"><span>Status</span><strong>{{ student.status }}</strong></div>
+  </div>
+</section>

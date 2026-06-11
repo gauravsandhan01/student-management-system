@@ -1,0 +1,8 @@
+<aside class="sidebar">
+  <div class="sidebar__title">Navigation</div>
+  <nav class="sidebar__nav">
+    <a *ngFor="let item of links" routerLink="{{ item.path }}" routerLinkActive="active" class="sidebar__link">
+      {{ item.label }}
+    </a>
+  </nav>
+</aside>

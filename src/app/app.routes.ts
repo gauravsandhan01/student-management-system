@@ -1,3 +1,41 @@
 import { Routes } from '@angular/router';
+import { AdminDashboardComponent } from './features/dashboard/admin-dashboard/admin-dashboard.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { RegisterComponent } from './features/auth/register/register.component';
+import { StudentListComponent } from './features/students/student-list/student-list.component';
+import { AddStudentComponent } from './features/students/add-student/add-student.component';
+import { StudentDetailsComponent } from './features/students/student-details/student-details.component';
+import { EditStudentComponent } from './features/students/edit-student/edit-student.component';
+import { TeacherListComponent } from './features/teachers/teacher-list/teacher-list.component';
+import { AddTeacherComponent } from './features/teachers/add-teacher/add-teacher.component';
+import { CourseListComponent } from './features/courses/course-list/course-list.component';
+import { AddCourseComponent } from './features/courses/add-course/add-course.component';
+import { AttendanceListComponent } from './features/attendance/attendance-list/attendance-list.component';
+import { ExamListComponent } from './features/exams/exam-list/exam-list.component';
+import { MarksListComponent } from './features/marks/marks-list/marks-list.component';
+import { PaymentHistoryComponent } from './features/fees/payment-history/payment-history.component';
+import { StudentReportComponent } from './features/reports/student-report/student-report.component';
+import { ProfileComponent } from './features/settings/profile/profile.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+  { path: 'dashboard', component: AdminDashboardComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'students', component: StudentListComponent },
+  { path: 'students/add', component: AddStudentComponent },
+  { path: 'students/:id', component: StudentDetailsComponent },
+  { path: 'students/:id/edit', component: EditStudentComponent },
+  { path: 'teachers', component: TeacherListComponent },
+  { path: 'teachers/add', component: AddTeacherComponent },
+  { path: 'courses', component: CourseListComponent },
+  { path: 'courses/add', component: AddCourseComponent },
+  { path: 'attendance', component: AttendanceListComponent },
+  { path: 'exams', component: ExamListComponent },
+  { path: 'marks', component: MarksListComponent },
+  { path: 'fees', component: PaymentHistoryComponent },
+  { path: 'reports', component: StudentReportComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: '**', component: PageNotFoundComponent }
+];
